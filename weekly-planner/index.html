@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my weekly planer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./CSS/style.css">
+
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg myNavbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <span class="bi bi-list-task" id="listTaskSymbol"> My Planner</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Tasks</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Settings</a>
+                    </li>
+                </ul>
+                <div class="d-flex justify-content-end">
+                    <i class="bi bi-bell"></i>
+                    <span class="rounded-circle bg-danger text-white px-2" id="alertCount">X</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- main -->
+    <main>
+        <!-- headline -->
+        <div id="headlineContainer">
+            <div class="d-flex justify-content-center align-items-center" id="headline"></div>
+            <div class="h3 d-inline p-4" id="headlineOverlay">Weekly planner</div>
+        </div>
+        <!-- tasks -->
+        <div class="container p-3 d-flex justify-content-between align-items-center" id="subHeader">
+            <div class="h3">Weekly Tasks</div>
+            <div class="btn btn-outline-dark mySortingBtn">
+                <i class="bi bi-sort-up"></i>
+            </div>
+        </div>
+
+        <div class="container p-3">
+            <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 justify-content-center g-3"
+                id="resultDiv">
+                <!-- js context -->
+
+                <!-- js context -->
+            </div>
+        </div>
+    </main>
+
+    <!-- footer -->
+    <div class="container-fluid" id="footerID">
+        <footer class="py-2">
+            <ul class="nav justify-content-center pb-2 mb-1">
+                <li class="nav-item">
+                    <a href="#" class="nav-link px-2">
+                        <i class="bi bi-facebook p-2 rounded text-black"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link px-2">
+                        <i class="bi bi-twitter p-2 rounded text-black"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link px-2">
+                        <i class="bi bi-google p-2 rounded text-black"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link px-2">
+                        <i class="bi bi-instagram p-2 rounded text-black"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link px-2">
+                        <i class="bi bi-linkedin p-2 rounded text-black"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link px-2">
+                        <i class="bi bi-github p-2 rounded text-black"></i>
+                    </a>
+                </li>
+            </ul>
+
+            <form action=""  class="text-center mb-3">
+                <label for="signUp" class="form-label">Sign up for our newsletter: </label>
+                <input type="email" name="signUp" id="signUp" placeholder="- email adress -" class="form-control border-black">
+                <div class="btn btn-outline-dark">Subscribe</div>
+            </form>
+
+            <p class="text-center">&copy; <span id="year"></span> Copyright: Johannes Zelenak</p>
+        </footer>
+    </div>
+
+    <!-- javascript -->
+    <script src="./js/data.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
