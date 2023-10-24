@@ -1,5 +1,6 @@
-tools.forEach((tool)=>{
-    let toolsResult = document.getElementById("toolsResult") as HTMLElement;
+"use strict";
+tools.forEach((tool) => {
+    let toolsResult = document.getElementById("toolsResult");
     toolsResult.innerHTML += `
     <div class="myCard">
         <div class="row myTextRow">
@@ -17,5 +18,5 @@ tools.forEach((tool)=>{
                 </div>
             </div>
         </div>
-    `
+    `;
 });
