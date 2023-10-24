@@ -3,7 +3,7 @@ tools.forEach((tool)=>{
     toolsResult.innerHTML += `
     <div class="myCard">
         <div class="row myTextRow">
-                <div class="col-12 h4">
+                <div class="col-12 fs-6">
                     ${tool.name}
                 </div>
             </div>
