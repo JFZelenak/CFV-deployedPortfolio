@@ -12,7 +12,7 @@ tools.forEach((tool) => {
             <div class="row myPercentageRow">
                 <div class="col-12">
                     <div class="d-flex">
-                        <div class="orange" style="width: ${tool.percentage}%;"> </div>
+                        <div class="color" style="width: ${tool.percentage}%;"> </div>
                         <div class="gray" style="width: ${tool.remainder}%;"> </div>
                     </div>
                 </div>

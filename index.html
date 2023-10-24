@@ -15,8 +15,7 @@
 <body>
     <!-- navbar -->
     <div class="container">
-        <header class="d-flex flex-wrap justify-content-right py-3 mb-4 border-bottom">
-    
+        <header class="d-flex flex-wrap justify-content-right mb-1">
           <ul class="nav nav-pills">
             <li class="nav-item"><a href="#myHome" class="nav-link text-dark" aria-current="page">Home</a></li>
             <li class="nav-item"><a href="#myAbout" class="nav-link text-dark">About</a></li>
@@ -26,6 +25,7 @@
             <li class="nav-item"><a href="#myContact" class="nav-link text-dark">Contact</a></li>
           </ul>
         </header>
+        <div class="myDivider"> </div>
       </div>
     <!-- Home -->
     <div class="container mb-5" id="myHome">
@@ -36,14 +36,49 @@
 
     </div>
     <!-- services -->
-    <div class="container mb-5" id="myServices">
-
+    <div class="container mb-5 w-50" id="myServices">
+        <div class="row mb-3">
+            <div class="col-2"></div>
+            <div class="col-8">
+                <div class="fs-7 text-center">Services</div>
+                <div class="fs-4 text-center">What I Do</div>
+                <div class="fs-6 text-center">As a fullstack web developer I do a little of everything however I mostly enjoy the logic stuff in programming.</div>
+            </div>
+            <div class="col-2"></div>
+        </div>
+        <div class="row row-cols-4 justify-content-between">
+            <div class="myServiceCard">
+                <div>
+                    <p class="fs-6">Fullstack</p>
+                    <p class="fs-2 mt-0 mb-0"><b>FS</b></p>
+                </div>
+            </div>
+            <div class="myServiceCard">
+                <div>
+                    <p class="fs-6">Frontend</p>
+                    <p class="fs-2 mt-0 mb-0"><b>FE</b></p>
+                </div>
+            </div>
+            <div class="myServiceCard">
+                <div>
+                    <p class="fs-6">Backend</p>
+                    <p class="fs-2 mt-0 mb-0"><b>BE</b></p>
+                </div>
+            </div>
+            <div class="myServiceCard">
+                <div>
+                    <p class="fs-6">Design</p>
+                    <p class="fs-2 mt-0 mb-0"><b>DE</b></p>
+                </div>
+            </div>
+        </div>
     </div>
     <!-- Skills -->
     <div class="container mb-5 w-75" id="mySkills">
         <div class="row mb-3">
             <div class="col-2"></div>
             <div class="col-8">
+                <div class="fs-7 text-center">Skills</div>
                 <div class="fs-4 text-center">Why Choose Me</div>
                 <div class="fs-6 text-center mb-3">I am a full stack web developer with experience with a lot of different tools and languages used in this area.</div>
             </div>
@@ -62,7 +97,8 @@
         <div class="row mb-3">
             <div class="col-2"></div>
             <div class="col-8">
-                <div class="fs-4 text-center">Check Out My Work</div>
+                <div class="fs-7 text-center">Projects</div>
+                <div class="fs-4 text-center">What I Did</div>
                 <div class="fs-6 text-center">That's a little collection of stuff I did and want to showcase here to give an idea of my work. Some of it is done only with HTML and CSS but others use SCSS, JS, TS or even Angular.</div>
             </div>
             <div class="col-2"></div>
@@ -107,6 +143,14 @@
 
     </div>
 
+    <!-- footer -->
+    <div class="container">
+        <div class="myDivider"> </div>
+        <footer class="d-flex flex-wrap justify-content-center align-items-center py-3 my-4">
+            <p class="fs-6 mb-0 text-dark">© 2023 Johannes Zelenak</p>
+        </footer>
+    </div>
+    <!-- script -->
     <script src="data.js"></script>
     <!-- bootstrap script -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
