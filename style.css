@@ -13,10 +13,18 @@
     background-image: var(--background-color-one);
 
 }
+.navbarspacer {
+    height: 50px;
+}
 .fs-7 {
     font-size: 10pt;
     color: dimgray;
 }
+/* my fixed top - navbar */
+.myFixedTop {
+    background-image: linear-gradient(rgba(255,255,255,1),rgba(255,255,255,1),rgba(255,255,255,1),rgba(255,255,255,0));
+}
+
 /* myServices */
 
 .myServiceCard {
