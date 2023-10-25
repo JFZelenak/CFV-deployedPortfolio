@@ -5,7 +5,7 @@
 }
 
 :root {
-    --background-color-one: linear-gradient(90deg, rgba(223,173,76,1),rgba(186,119,51,1), rgba(223,173,76,1));
+    --background-color-one: linear-gradient(90deg, rgba(223,173,76,1),rgba(186,119,51,1));
     --background-color-two: linear-gradient(90deg, lightgray, dimgray);
 } 
 .myDivider {
