@@ -1,10 +1,18 @@
 "use strict";
 let tools = [{
-        name: "HTML, CSS",
+        name: "HTML",
         percentage: 90,
         remainder: 10
     }, {
-        name: "JavaScript, TypeScript",
+        name: "CSS",
+        percentage: 85,
+        remainder: 15
+    }, {
+        name: "JavaScript",
+        percentage: 80,
+        remainder: 20
+    }, {
+        name: "TypeScript",
         percentage: 70,
         remainder: 30
     }, {

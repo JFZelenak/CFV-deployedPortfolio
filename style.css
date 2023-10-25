@@ -41,41 +41,41 @@
 /* myAbout */
 #myAbout img {
     width: 100%;
-    height: auto;
+    /* height: auto; */
 }
 /* myServices */
 .serviceCardCont {
     overflow: hidden;
     z-index: 7;
 }
-.myServiceCard, .myServiceCard2 {
-    width: 140px;
-    height: 140px;
-    border: 1px solid gray;
-    box-shadow: 0px 0px 7px lightgray;
+.movingCard, .unmovingCard {
     border-radius: 5px;
     text-align: center;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-}
-.myServiceCard {
-    position: absolute;
     transition: 500ms all linear;
+}
+.movingCard {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    /* transition: 500ms all linear; */
     z-index: 6;
     background-color: white;
 }
-.myServiceCard2 {
-    position: relative;
-    top: 0;
+.unmovingCard {
+    width: 150px;
+    height: 150px;
+    border: 1px solid gray;
+    box-shadow: 0px 0px 7px lightgray;
+    position: absolute;
     background-color: var(--main-color);
     color: white;
+    /* z-index: 7; */
 }
-.myServiceCard:hover{
-    transform: translateY(140px);
-}
-.myServiceCard p {
+.movingCard p {
     margin: 0;
     padding: 0;
 }
