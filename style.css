@@ -5,7 +5,7 @@
 }
 
 :root {
-    --background-color-one: linear-gradient(90deg, rgb(81, 95, 247),rgb(27, 20, 162), rgb(115, 180, 230));
+    --background-color-one: linear-gradient(90deg, rgba(223,173,76,1),rgba(186,119,51,1), rgba(223,173,76,1));
     --background-color-two: linear-gradient(90deg, lightgray, dimgray);
 } 
 .myDivider {
@@ -16,6 +16,9 @@
 .navbarspacer {
     height: 50px;
 }
+.colorUnderline {
+    border-bottom: 2px solid rgba(223,173,76,1);
+}
 .fs-7 {
     font-size: 10pt;
     color: dimgray;
@@ -24,6 +27,16 @@
 .myFixedTop {
     background-image: linear-gradient(rgba(255,255,255,1),rgba(255,255,255,1),rgba(255,255,255,1),rgba(255,255,255,1),rgba(255,255,255,0));
 }
+/* myHome */
+.myLink {
+    text-decoration: none;
+    color: orange;
+}
+#myHeroImage {
+    z-index: 5;
+    height: 600px;
+}
+
 /* myAbout */
 #myAbout img {
     width: 100%;
