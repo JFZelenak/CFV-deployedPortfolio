@@ -5,7 +5,8 @@
 }
 
 :root {
-    --background-color-one: linear-gradient(90deg, rgba(223,173,76,1),rgba(186,119,51,1));
+    --main-color: rgba(223,173,76,1);
+    --background-color-one: linear-gradient(90deg, var(--main-color),rgba(186,119,51,1));
     --background-color-two: linear-gradient(90deg, lightgray, dimgray);
 } 
 .myDivider {
@@ -17,7 +18,7 @@
     height: 50px;
 }
 .colorUnderline {
-    border-bottom: 2px solid rgba(223,173,76,1);
+    border-bottom: 2px solid var(--main-color);
 }
 .fs-7 {
     font-size: 10pt;
@@ -30,7 +31,7 @@
 /* myHome */
 .myLink {
     text-decoration: none;
-    color: orange;
+    color: var(--main-color);
 }
 #myHeroImage {
     z-index: 5;
@@ -43,8 +44,11 @@
     height: auto;
 }
 /* myServices */
-
-.myServiceCard {
+.serviceCardCont {
+    overflow: hidden;
+    z-index: 7;
+}
+.myServiceCard, .myServiceCard2 {
     width: 140px;
     height: 140px;
     border: 1px solid gray;
@@ -55,6 +59,21 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+}
+.myServiceCard {
+    position: absolute;
+    transition: 500ms all linear;
+    z-index: 6;
+    background-color: white;
+}
+.myServiceCard2 {
+    position: relative;
+    top: 0;
+    background-color: var(--main-color);
+    color: white;
+}
+.myServiceCard:hover{
+    transform: translateY(140px);
 }
 .myServiceCard p {
     margin: 0;
