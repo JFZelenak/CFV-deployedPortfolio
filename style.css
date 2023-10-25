@@ -34,8 +34,8 @@
     color: var(--main-color);
 }
 #myHeroImage {
-    z-index: 5;
-    height: 600px;
+    /* z-index: 5; */
+    width: 100%;
 }
 
 /* myAbout */
@@ -46,7 +46,10 @@
 /* myServices */
 .serviceCardCont {
     overflow: hidden;
-    z-index: 7;
+    z-index: 99;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
 }
 .movingCard, .unmovingCard {
     border-radius: 5px;
@@ -55,25 +58,26 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    transition: 500ms all linear;
+    padding: 0px;
+    margin: 0px;
 }
 .movingCard {
-    width: 50px;
-    height: 50px;
+    width: 140px;
+    height: 140px;
     position: relative;
-    /* transition: 500ms all linear; */
     z-index: 6;
-    background-color: white;
+    background-color: rgba(255,255,255,1);
+    /* outline: 1px solid red; */
 }
 .unmovingCard {
-    width: 150px;
-    height: 150px;
-    border: 1px solid gray;
+    width: 140px;
+    height: 140px;
+    outline: 1px solid gray;
     box-shadow: 0px 0px 7px lightgray;
     position: absolute;
     background-color: var(--main-color);
     color: white;
-    /* z-index: 7; */
+    z-index: 5;
 }
 .movingCard p {
     margin: 0;
