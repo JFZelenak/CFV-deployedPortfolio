@@ -85,11 +85,16 @@
     padding: 2.5px;
 }
 /* myProjects */
-#myProjects a {
+.myProjectGrid {
     background-color: white;
     padding: 5px;
 }
-a img {
+.myProjectImgCont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.projectImg {
     width: 100%;
     border: 1px solid gray;
     border-radius: 5px;
