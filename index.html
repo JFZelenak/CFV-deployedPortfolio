@@ -18,15 +18,24 @@
 <body>
     <!-- navbar -->
     <div class="container fixed-top myFixedTop">
-        <header class="d-flex flex-wrap justify-content-right mb-1">
-            <ul class="nav nav-pills">
-                <li class="nav-item"><a href="#myHome" class="nav-link text-dark" aria-current="page">Home</a></li>
-                <li class="nav-item"><a href="#myAbout" class="nav-link text-dark">About</a></li>
-                <li class="nav-item"><a href="#myServices" class="nav-link text-dark">Service</a></li>
-                <li class="nav-item"><a href="#mySkills" class="nav-link text-dark">Skills</a></li>
-                <li class="nav-item"><a href="#myProjects" class="nav-link text-dark">Projects</a></li>
-                <li class="nav-item"><a href="#myContact" class="nav-link text-dark">Contact</a></li>
-            </ul>
+        <header class="">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#myNavbarToggler" aria-controls="myNavbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="myNavbarToggler">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item"><a href="#myHome" class="nav-link text-dark" aria-current="page">Home</a></li>
+                            <li class="nav-item"><a href="#myAbout" class="nav-link text-dark">About</a></li>
+                            <li class="nav-item"><a href="#myServices" class="nav-link text-dark">Service</a></li>
+                            <li class="nav-item"><a href="#mySkills" class="nav-link text-dark">Skills</a></li>
+                            <li class="nav-item"><a href="#myProjects" class="nav-link text-dark">Projects</a></li>
+                            <li class="nav-item"><a href="#myContact" class="nav-link text-dark">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
         </header>
         <div class="myDivider"> </div>
     </div>
@@ -34,8 +43,8 @@
     <!-- home -->
     <div class="container mb-5" id="myHome">
         <div class="navbarspacer"></div>
-        <div class="row">
-            <div class="col-4 d-flex flex-column justify-content-center">
+        <div class="row row-cols-1 ro1-cols-xs-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-2 row-cols-xl-2 row-cols-xxl-2">
+            <div class="d-flex flex-column justify-content-center">
                 <div class="fs-4">Hi, I'm</div>
                 <div class="fs-1 fw-bold colorUnderline">Johannes F. Zelenak</div>
                 <div class="fs-3">fullstack web developer</div>
@@ -44,7 +53,7 @@
                     <a href="mailto:jf.zelenak@gmail.com" class="myLink"><i class="bi bi-envelope-at"></i></a>
                 </div>
             </div>
-            <div class="col-8 d-flex justify-content-center">
+            <div class="d-flex">
                 <img src="./assets/images/it-guy-flying3_removebg.png" alt="picture of IT guy flying through space" id="myHeroImage">
             </div>
         </div>
@@ -55,13 +64,13 @@
         <div class="navbarspacer"></div>
 
         <div class="row">
-            <div class="col-3 d-flex">
-                <p class="display-5 mb-3">
+            <div class="col-12 col-md-3">
+                <p class="fs-2 mb-3">
                     <span class="fw-bold colorUnderline">Dipl.-Ing. Johannes F. Zelenak</span><br>
                         Fullstack Web Developer
                 </p>
             </div>
-            <div class="col-6 d-flex">
+            <div class="col-12 col-md-6">
                 <p>I completed my diploma studies in architecture at the TU Wien as a Dipl.-Ing. in 2015.
                     After that, I worked full-time as an employee in an architecture office until April 2023. Since May
                     2023, I have made a career change into the IT industry, a field that has always interested and
@@ -82,8 +91,8 @@
                     CodeInstitute within one day and received a positive participation certificate.
                 </p>
             </div>
-            <div class="col-3 d-flex">
-                <div>
+            <div class="col-12 col-md-3">
+                <div class="imgCont">
                     <img src="./assets/images/Profilbild-jfz.jpg" alt="profile picture">
                 </div>
             </div>
@@ -92,109 +101,66 @@
     </div>
     </div>
     <!-- services -->
-    <div class="container mb-5 w-50" id="myServices">
+    <div class="container mb-5" id="myServices">
         <div class="navbarspacer"></div>
         <div class="row mb-3">
-            <div class="col-2"></div>
-            <div class="col-8">
+            <div class="col-12 col-md-8 text-center w-100">
                 <div class="fs-7 text-center">Services</div>
                 <div class="fs-4 text-center">What I Do</div>
                 <div class="fs-6 text-center">As a fullstack web developer I do a little of everything, however I mostly
                     enjoy the logic stuff in programming.</div>
             </div>
-            <div class="col-2"></div>
         </div>
-        <div class="row row-cols-4 justify-content-between">
+        <div class="row row-cols-2 row-cols-md-4 justify-content-between">
+
             <div class="serviceCardCont">
-                
                 <div class="unmovingCard">
                     <div>
                         <p class="fs-5">Fullstack</p>
                     </div>
                 </div>
-                <div class="movingCard" onmouseover="moveAway(this)" style="">
+                <div class="movingCard">
                     <div>
                         <p class="fs-2 mt-0 mb-0"><b>FS</b></p>
                     </div>
                 </div>
-                <div class="movingCard" onmouseover="moveAway(this)">
-                    <div>
-                        <p class="fs-2 mt-0 mb-0"><b>FS</b></p>
-                    </div>
-                </div>
-                <div class="movingCard" onmouseover="moveAway(this)">
-                    <div>
-                        <p class="fs-2 mt-0 mb-0"><b>FS</b></p>
-                    </div>
-                </div>
-                <div class="movingCard" onmouseover="moveAway(this)">
-                    <div>
-                        <p class="fs-2 mt-0 mb-0"><b>FS</b></p>
-                    </div>
-                </div>
-                <div class="movingCard" onmouseover="moveAway(this)">
-                    <div>
-                        <p class="fs-2 mt-0 mb-0"><b>FS</b></p>
-                    </div>
-                </div>
-                <div class="movingCard" onmouseover="moveAway(this)">
-                    <div>
-                        <p class="fs-2 mt-0 mb-0"><b>FS</b></p>
-                    </div>
-                </div>
-                <div class="movingCard" onmouseover="moveAway(this)">
-                    <div>
-                        <p class="fs-2 mt-0 mb-0"><b>FS</b></p>
-                    </div>
-                </div>
-                <div class="movingCard" onmouseover="moveAway(this)">
-                    <div>
-                        <p class="fs-2 mt-0 mb-0"><b>FS</b></p>
-                    </div>
-                </div>
-                <div class="movingCard" onmouseover="moveAway(this)">
-                    <div>
-                        <p class="fs-2 mt-0 mb-0"><b>FS</b></p>
-                    </div>
-                </div>
-                
             </div>
 
             <div class="serviceCardCont">
-                <div class="movingCard" onmouseover="moveAway(this)">
-                    <div>
-                        <p class="fs-2 mt-0 mb-0"><b>FE</b></p>
-                    </div>
-                </div>
                 <div class="unmovingCard">
                     <div>
                         <p class="fs-5">Frontend</p>
                     </div>
                 </div>
+                <div class="movingCard">
+                    <div>
+                        <p class="fs-2 mt-0 mb-0"><b>FE</b></p>
+                    </div>
+                </div>
             </div>
             
             <div class="serviceCardCont">
-                <div class="movingCard" onmouseover="moveAway(this)">
-                    <div>
-                        <p class="fs-2 mt-0 mb-0"><b>BE</b></p>
-                    </div>
-                </div>
                 <div class="unmovingCard">
                     <div>
                         <p class="fs-5">Backend</p>
                     </div>
                 </div>
+                <div class="movingCard">
+                    <div>
+                        <p class="fs-2 mt-0 mb-0"><b>BE</b></p>
+                    </div>
+                </div>
             </div>
             
             <div class="serviceCardCont">
-                <div class="movingCard" onmouseover="moveAway(this)">
-                    <div>
-                        <p class="fs-2 mt-0 mb-0"><b>DE</b></p>
-                    </div>
-                </div>
                 <div class="unmovingCard">
                     <div>
                         <p class="fs-5">Design</p>
+                    </div>
+                </div>
+                <div class="movingCard">
+                    <div>
+                        <p class="fs-2 mt-0 mb-0"><b>DE</b></p>
                     </div>
                 </div>
             </div>
@@ -203,18 +169,16 @@
     </div>
 
     <!-- skills -->
-    <div class="container mb-5 w-75" id="mySkills">
+    <div class="container mb-5" id="mySkills">
         <div class="navbarspacer"></div>
 
         <div class="row mb-3">
-            <div class="col-2"></div>
-            <div class="col-8">
+            <div class="col-12 col-md-8 text-center w-100">
                 <div class="fs-7 text-center">Skills</div>
                 <div class="fs-4 text-center">Why Choose Me</div>
                 <div class="fs-6 text-center mb-3">I am a full stack web developer with experience with a lot of
                     different tools and languages used in this area.</div>
             </div>
-            <div class="col-2"></div>
         </div>
 
         <div class="row row-cols-2" id="toolsResult">
@@ -224,22 +188,20 @@
     </div>
 
     <!-- projects -->
-    <div class="container mb-5 w-75" id="myProjects">
+    <div class="container mb-5" id="myProjects">
         <div class="navbarspacer"></div>
 
         <div class="row mb-3">
-            <div class="col-2"></div>
-            <div class="col-8">
+            <div class="col-12 col-md-8 text-center w-100">
                 <div class="fs-7 text-center">Projects</div>
                 <div class="fs-4 text-center">What I Did</div>
                 <div class="fs-6 text-center">That's a little collection of stuff I did and want to showcase here to
                     give an idea of my work. Some of it is done only with HTML and CSS but others use SCSS, JS, TS or
                     even Angular.</div>
             </div>
-            <div class="col-2"></div>
         </div>
 
-        <div class="row row-cols-5">
+        <div class="row row-cols-2 row-cols-md-5 justify-content-between">
             <div class="myProjectGrid">
                 <a href="food-blog/">
                     <div class="myProjectImgCont mb-2">
@@ -283,16 +245,14 @@
 
     <!-- contact -->
 
-    <div class="container mb-5 w-50" id="myContact">
+    <div class="container mb-5" id="myContact">
         <div class="navbarspacer"></div>
 
         <div class="row mb-3">
-            <div class="col-2"></div>
-            <div class="col-8">
+            <div class="col-12 col-md-8 text-center w-100">
                 <div class="fs-7 text-center">Contact</div>
                 <div class="fs-4 text-center">How To Get In Contact</div>
             </div>
-            <div class="col-2"></div>
         </div>
         <div class="d-flex justify-content-center">
             <table class="table w-50">

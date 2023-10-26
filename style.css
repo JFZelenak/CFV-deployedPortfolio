@@ -3,7 +3,6 @@
     padding:0;
     box-sizing: border-box;
 }
-
 :root {
     --main-color: rgba(223,173,76,1);
     --background-color-one: linear-gradient(90deg, var(--main-color),rgba(186,119,51,1));
@@ -12,10 +11,9 @@
 .myDivider {
     padding: 0.5px;
     background-image: var(--background-color-one);
-
 }
 .navbarspacer {
-    height: 50px;
+    height: 56px;
 }
 .colorUnderline {
     border-bottom: 2px solid var(--main-color);
@@ -29,55 +27,80 @@
     background-image: linear-gradient(rgba(255,255,255,1),rgba(255,255,255,1),rgba(255,255,255,1),rgba(255,255,255,1),rgba(255,255,255,0));
 }
 /* myHome */
+body {
+    overflow-x: hidden;
+}
 .myLink {
     text-decoration: none;
     color: var(--main-color);
 }
 #myHeroImage {
-    z-index: 5;
-    height: 600px;
+    width: 100%;
+    animation: none;
 }
-
+@keyframes flying {
+    0% {
+        transform: translate3d(0px,0px,0px);
+    }
+    49% {
+        transform: translate3d(-3000px,3000px,0px);
+    }
+    50% {
+        transform: translate3d(-3000px,-3000px,0px);
+    }
+    51% {
+        transform: translate3d(3000px,-3000px,0px);
+    }
+    100% {
+        transform: translate3d(0px,0px,0px);
+    }
+}
 /* myAbout */
+.imgCont {
+    display: flex;
+    justify-content: center;
+}
 #myAbout img {
     width: 100%;
-    /* height: auto; */
+    max-width: 300px;
 }
 /* myServices */
 .serviceCardCont {
-    overflow: hidden;
-    z-index: 7;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
 }
 .movingCard, .unmovingCard {
+    width: 138px;
+    height: 138px;
+    padding: 0px;
+    margin: 0px;
     border-radius: 5px;
+    border: 1px solid gray;
     text-align: center;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    transition: 500ms all linear;
 }
 .movingCard {
-    width: 50px;
-    height: 50px;
+    box-shadow: 0px 0px 7px lightgray;
     position: relative;
-    /* transition: 500ms all linear; */
     z-index: 6;
-    background-color: white;
+    background-color: rgba(255,255,255,1);
+}
+.movingCard:hover {
+    opacity: 0;
+    transition: 500ms all ease-in-out;
 }
 .unmovingCard {
-    width: 150px;
-    height: 150px;
-    border: 1px solid gray;
-    box-shadow: 0px 0px 7px lightgray;
     position: absolute;
     background-color: var(--main-color);
     color: white;
-    /* z-index: 7; */
+    z-index: 5;
 }
-.movingCard p {
-    margin: 0;
-    padding: 0;
+.unmovingCard *{
+    margin-bottom: 0px;
 }
 /* mySkills */
 .myPercentageRow, .myTextRow {
@@ -90,7 +113,6 @@
 }
 .color {
     background-color: blue;
-    /* background-image: linear-gradient(90deg, orange,orangered, orange); */
     background-image: var(--background-color-one);
     border-radius: 2.5px 0px 0px 2.5px;
 }
@@ -118,4 +140,8 @@
     border: 1px solid gray;
     border-radius: 5px;
     box-shadow: 0px 0px 7px lightgray;
+}
+.projectImg:hover {
+    transform: scale(1.05);
+    transition: 500ms all ease-in-out;
 }
