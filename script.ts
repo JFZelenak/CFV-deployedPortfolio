@@ -1,3 +1,4 @@
+// display tools data
 tools.forEach((tool)=>{
     let toolsResult = document.getElementById("toolsResult") as HTMLElement;
     toolsResult.innerHTML += `
@@ -19,3 +20,18 @@ tools.forEach((tool)=>{
         </div>
     `
 });
+
+// animate hero image
+const myHeroImage: HTMLElement | null = document.querySelector('#myHeroImage');
+
+if (myHeroImage) {
+  myHeroImage.addEventListener('mouseenter', () => {
+    if (myHeroImage.style.animationName !== 'flying') {
+      myHeroImage.style.animation = 'flying 3000ms ease-in-out';
+    }
+  });
+
+  myHeroImage.addEventListener('animationend', () => {
+    myHeroImage.style.animation = 'none';
+  });
+}
