@@ -28,7 +28,7 @@
 }
 /* myHome */
 body {
-    overflow: hidden;
+    overflow-x: hidden;
 }
 .myLink {
     text-decoration: none;
