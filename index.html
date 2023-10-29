@@ -269,12 +269,42 @@
                     <th class="text-left">email:</th>
                     <td class="text-center">jf.zelenak@gmail.com</td>
                 </tr>
-                <tr>
-                    <th class="text-right"><i class="bi bi-telephone"></i></th>
-                    <th class="text-left">phone:</th>
-                    <td class="text-center">+43 699 11911754</td>
-                </tr>
             </table>
+            
+        </div>
+        <div class="d-flex justify-content-center">
+            <table class="table w-50">
+                <thead>
+                    <th colspan="3">contact form:</th>
+                </thead>
+                <tbody>
+                    <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/mrgwjvly" method="POST">
+                        <fieldset id="fs-frm-inputs">
+                            <tr>
+                                <td class="text-right"></td>
+                                <td class="text-left"><label for="full-name">Full Name</label></td>
+                                <td class="text-center"><input type="text" name="name" id="full-name" placeholder="First and Last" required=""></td>
+                            </tr>
+                            <tr>
+                                <td class="text-right"></td>
+                                <td class="text-left"><label for="email-address">Email Address</label></td>
+                                <td class="text-center"><input type="email" name="_replyto" id="email-address" placeholder="email@domain.tld" required=""></td>
+                            </tr>
+                            <tr>
+                                <td class="text-right"></td>
+                                <td class="text-left"><label for="message">Message</label></td>
+                                <td class="text-center">
+                                    <textarea rows="5" name="message" id="message" placeholder="your short message here ..." required=""></textarea>
+                                    <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="3"><input class="btn btn-warning" type="submit" value="Submit"></td>
+                            </tr>
+                        </fieldset>
+                    </form>
+                </tbody>
+            </table>   
         </div>
     </div>
 
