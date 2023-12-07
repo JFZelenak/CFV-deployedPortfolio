@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello StaticController!{% endblock %}
+
+{% block body %}
+    <div class="container col-xxl-8 px-4 py-5">
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+            <div class="col-10 col-sm-8 col-lg-6 p-3 border border-dark shadow">
+                <img src="https://cdn.pixabay.com/photo/2016/06/01/00/40/post-impressionist-1428129_1280.jpg" class="d-block mx-lg-auto img-fluid" alt="random image from ArtGallery" width="700" height="500" loading="lazy">
+            </div>
+            <div class="col-lg-6">
+                <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Welcome to<br> ArtGallery!</h1>
+                <p class="lead">The core of avoiding moons is true. Vision, result and an eternal great unknown. Who can emerge the fear and art of a doer if he has the true joy of the believer.</p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                    {% if (is_granted('IS_AUTHENTICATED_FULLY') == false) %}
+                    <a href="/login" class="border border-dark p-3 link-dark text-decoration-none link-opacity-75 link-opacity-100-hover shadow">LOGIN</a>
+                    <a href="/register" class="border border-dark p-3 link-dark text-decoration-none link-opacity-75 link-opacity-100-hover shadow">Register</a>
+                    {% endif %}
+                    {% if (is_granted('IS_AUTHENTICATED_FULLY')) %}
+                    <a class="border border-dark p-3 link-dark text-decoration-none link-opacity-75 link-opacity-100-hover shadow" href="/art">Gallery</a>
+                    <a class="border border-dark p-3 link-dark text-decoration-none link-opacity-75 link-opacity-100-hover shadow" href="/logout">Logout</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New User{% endblock %}
+
+{% block body %}
+    {% if (is_granted('ROLE_ADMIN') == false) %}
+        {% set redirectUrl = path('app_art_items_index') %}
+        <script>
+            window.location.href = "{{ redirectUrl }}";
+        </script>
+    {% endif %}
+    <h1>Create new User</h1>
+
+    {{ include('user2/_form.html.twig') }}
+
+    <a href="{{ path('app_user2_index') }}">back to list</a>
+{% endblock %}

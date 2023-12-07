@@ -7,23 +7,27 @@ let tools: Array<{
     percentage: 90,
     remainder: 10
 }, {
-    name: "CSS",
-    percentage: 85,
-    remainder: 15
+    name: "CSS/SCSS",
+    percentage: 75,
+    remainder: 25
 }, {
-    name: "JavaScript",
-    percentage: 80,
-    remainder: 20
-}, {
-    name: "TypeScript",
-    percentage: 70,
-    remainder: 30
+    name: "JavaScript/TypeScript",
+    percentage: 65,
+    remainder: 35
 }, {
     name: "Angular",
-    percentage: 60,
-    remainder: 40
-}, {
-    name: "Java",
     percentage: 40,
     remainder: 60
+}, {
+    name: "Java",
+    percentage: 30,
+    remainder: 70
+}, {
+    name: "PHP",
+    percentage: 30,
+    remainder: 70
+}, {
+    name: "Symfony",
+    percentage: 30,
+    remainder: 70
 }];

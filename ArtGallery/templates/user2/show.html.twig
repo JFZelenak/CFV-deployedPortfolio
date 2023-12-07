@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}User{% endblock %}
+
+{% block body %}
+    {% if (is_granted('ROLE_ADMIN') == false) %}
+        {% set redirectUrl = path('app_art_items_index') %}
+        <script>
+            window.location.href = "{{ redirectUrl }}";
+        </script>
+    {% endif %}
+    <h1>User</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ user.id }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ user.email }}</td>
+            </tr>
+            <tr>
+                <th>Role</th>
+                <td>{{ ( user.roles ? user.roles|json_encode : '' ) == '["ROLE_ADMIN","ROLE_USER"]' ? "Admin" : "User" }}</td>
+            </tr>
+            <tr>
+                <th>First name</th>
+                <td>{{ user.firstName }}</td>
+            </tr>
+            <tr>
+                <th>Last name</th>
+                <td>{{ user.lastName }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_user2_index') }}" class="btn btn-secondary">back to list</a>
+
+    <a href="{{ path('app_user2_edit', {'id': user.id}) }}" class="btn btn-warning">edit</a>
+
+    {{ include('user2/_delete_form.html.twig') }}
+{% endblock %}

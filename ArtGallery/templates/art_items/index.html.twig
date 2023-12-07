@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Gallery{% endblock %}
+
+{% block body %}
+    <h1>Gallery</h1>
+    <div class="">
+        {% for art_item in art_items %}
+            <div class="d-flex justify-content-center gap-3 my-5">
+                <div class="d-flex flex-column justify-content-end" style="width: 350px;">
+                    <div class="p-2 border border-dark shadow">
+                        <table class="table">
+                            <tbody>
+                            <tr>
+                                <th>Title:</th>
+                                <td>{{ art_item.name }}</td>
+                            </tr>
+                            <tr>
+                                <th>Artist:</th>
+                                <td>{{ art_item.artistFirstName }} {{ art_item.artistLastName }}</td>
+                            </tr>
+
+                            {% if (is_granted('IS_AUTHENTICATED_FULLY')) %}
+                                <tr>
+                                    <td colspan="2" class="text-center">
+                                        <a href="{{ path('app_art_items_show', {'id': art_item.id}) }}" class="border border-dark p-1 link-dark text-decoration-none link-opacity-75 link-opacity-100-hover shadow">show details</a>
+                                        {% if (is_granted('ROLE_ADMIN')) %}
+                                            <a href="{{ path('app_art_items_edit', {'id': art_item.id}) }}" class="border border-dark p-1 link-dark text-decoration-none link-opacity-75 link-opacity-100-hover shadow">edit</a>
+                                        {% endif %}
+                                    </td>
+                                </tr>
+                            {% endif %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <div class="p-3 border border-dark shadow">
+                        <img src="{{ art_item.image }}" alt="image of {{ art_item.id }}" height="500px">
+                    </div>
+                </div>
+            </div>
+        {% else %}
+            <p>no records found</p>
+        {% endfor %}
+    </div>
+
+    {% if (is_granted('ROLE_ADMIN')) %}
+        <a href="{{ path('app_art_items_new') }}" class="border border-dark p-3 link-dark text-decoration-none link-opacity-75 link-opacity-100-hover shadow">Create new</a>
+    {% endif %}
+    <div class="mt-5"> </div>
+{% endblock %}

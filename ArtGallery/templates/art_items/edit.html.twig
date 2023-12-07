@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit ArtItems{% endblock %}
+
+{% block body %}
+    <h1>Edit ArtItems</h1>
+
+    {{ include('art_items/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('app_art_items_index') }}">back to list</a>
+
+    {{ include('art_items/_delete_form.html.twig') }}
+{% endblock %}
