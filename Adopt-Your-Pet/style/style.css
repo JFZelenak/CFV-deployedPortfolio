@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#logo-in-navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#logo-text {
+  margin-left: 130px;
+}
+
+#myHeroContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.myHeroImageContainer {
+  height: 250px;
+}
+.myHeroImageContainer img {
+  height: 100%;
+}
+
+.myHeroTextContainer {
+  width: 250px;
+  box-shadow: 0 0 7px lightgray;
+  border: 1px solid dimgray;
+  border-radius: 20px;
+}
+
+.myNotChangeable {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 38px;
+  padding-left: 12px;
+}
+
+#footer-logo-text {
+  white-space: nowrap;
+}
+
+.notAvailableText {
+  position: absolute;
+  top: 30px;
+  width: 100%;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.85);
+  text-align: center;
+  font-size: 24px;
+}
+
+.notAvailableImg {
+  filter: blur(3px);
+  -webkit-filter: blur(3px);
+}
+
+@media screen and (width < 768px) {
+  .myHeroImageContainer img, .myHeroImageContainer p, .myHeroImageContainer .mySessionContainer {
+    display: none;
+  }
+}
+@media screen and (width < 364px) {
+  #logo-in-navbar {
+    position: static;
+  }
+  #logo-text {
+    margin-left: 0;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
