@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.myCard {
+  padding: 5px;
+  margin: 15px;
+  width: 290px;
+  background-image: linear-gradient(45deg, rgb(230, 230, 230), rgb(170, 170, 170));
+  border: 1px solid rgb(30, 30, 30);
+  border-radius: 10px;
+  box-shadow: 0 0 7px grey;
+}
+.myCard .imgContainer {
+  width: 100%;
+  height: 150px;
+  object-fit: scale-down;
+  text-align: center;
+}
+.myCard img {
+  height: 100%;
+  object-fit: scale-down;
+}
+.myCard .myTable tr, .myCard .myTable th, .myCard .myTable td {
+  background-color: rgba(0, 0, 255, 0) !important;
+}
+.myCard .myTable th {
+  padding-top: 12px;
+  font-size: 12px;
+}
+.myCard .myTable a {
+  text-decoration: none;
+  color: #212529;
+}
+.myCard ul, .myCard li {
+  list-style: none;
+  padding-left: 0;
+}
+.myCard ul span, .myCard li span {
+  font-weight: bold;
+  font-size: 12px;
+}
+.myCard ul a, .myCard li a {
+  text-decoration: none;
+  color: #212529;
+}
+.myCard .myBtnContainer, .myCard .imgContainer {
+  background-color: white;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+form {
+  background-image: linear-gradient(45deg, rgb(230, 230, 230), rgb(170, 170, 170));
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.myMediaQueryCont {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.myMediaQueryCont .myMediaQuery1, .myMediaQueryCont .myMediaQuery2 {
+  width: 100%;
+}
+.myMediaQueryCont .marginRight {
+  margin-right: 0;
+}
+
+@media screen and (width >= 775px) {
+  .myMediaQueryCont {
+    flex-wrap: nowrap;
+  }
+  .myMediaQuery1 {
+    width: 50%;
+  }
+  .myMediaQuery2 {
+    width: 25%;
+  }
+  .marginRight {
+    margin-right: 14px !important;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
